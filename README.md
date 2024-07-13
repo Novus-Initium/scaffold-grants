@@ -1,15 +1,15 @@
-# 🏗 Scaffold-ETH 2
+# 🏗 Scaffold-Grants
 
 <h4 align="center">
   <a href="https://docs.scaffoldeth.io">Documentation</a> |
   <a href="https://scaffoldeth.io">Website</a>
 </h4>
 
-🧪 An open-source, up-to-date toolkit for building decentralized applications (dapps) on the Ethereum blockchain. It's designed to make it easier for developers to create and deploy smart contracts and build user interfaces that interact with those contracts.
+🧪 An open-source, up-to-date toolkit for building decentralized grant stack applications (dapps) on the Ethereum and EVM blockchains. It's designed to make it easier for developers to create and deploy custom smart contracts and build more easily edit user interfaces that interact with a custom version of the Allo v1 contracts, with abstracted componenets to make it easier to understand, modify, experiement, and learn with. 
 
-⚙️ Built using NextJS, RainbowKit, Hardhat, Wagmi, Viem, and Typescript.
+⚙️ Built using NextJS, RainbowKit, Hardhat, Wagmi, Viem, and Typescript, Allo v1, IPFS.
 
-- ✅ **Contract Hot Reload**: Your frontend auto-adapts to your smart contract as you edit it.
+- ✅ **Contract Hot Reload**: Your frontend auto-adapts to your smart contract as you edit it! Customize your grant stack and automatically generate web-hooks for custom contracts and functions. 
 - 🪝 **[Custom hooks](https://docs.scaffoldeth.io/hooks/)**: Collection of React hooks wrapper around [wagmi](https://wagmi.sh/) to simplify interactions with smart contracts with typescript autocompletion.
 - 🧱 [**Components**](https://docs.scaffoldeth.io/components/): Collection of common web3 components to quickly build your frontend.
 - 🔥 **Burner Wallet & Local Faucet**: Quickly test your application with a burner wallet and local faucet.
@@ -32,8 +32,8 @@ To get started with Scaffold-ETH 2, follow the steps below:
 1. Clone this repo & install dependencies
 
 ```
-git clone https://github.com/scaffold-eth/scaffold-eth-2.git
-cd scaffold-eth-2
+git clone https://github.com/0xJade/scaffold-grants-stack.git
+cd scaffold-grants-stack
 yarn install
 ```
 
@@ -63,14 +63,14 @@ Visit your app on: `http://localhost:3000`. You can interact with your smart con
 
 **What's next**:
 
-- Edit your smart contract `YourContract.sol` in `packages/hardhat/contracts`
+- Edit your smart contract controlling capital allocation and grants management` in `packages/hardhat/contracts`
 - Edit your frontend homepage at `packages/nextjs/app/page.tsx`. For guidance on [routing](https://nextjs.org/docs/app/building-your-application/routing/defining-routes) and configuring [pages/layouts](https://nextjs.org/docs/app/building-your-application/routing/pages-and-layouts) checkout the Next.js documentation.
 - Edit your deployment scripts in `packages/hardhat/deploy`
 - Edit your smart contract test in: `packages/hardhat/test`. To run test use `yarn hardhat:test`
 
 ## Documentation
 
-Visit our [docs](https://docs.scaffoldeth.io) to learn how to start building with Scaffold-ETH 2.
+To learn more about Scaffold-Eth-2 and allo visit [docs](https://docs.scaffoldeth.io) to learn how to start building with Scaffold-ETH 2. and (Insert allo link here)
 
 To know more about its features, check out our [website](https://scaffoldeth.io).
 
