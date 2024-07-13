@@ -30,7 +30,7 @@ export default function ProjectsPage() {
       <div className="flex items-center justify-between">
         <h2 className="text-4xl font-bold mb-5">Projects</h2>
 
-        <a role="button" className="btn btn-primary" href="/projects/new">
+        <a role="button" className="btn btn-primary" href="/projects/create">
           Create new project
         </a>
       </div>
