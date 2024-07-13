@@ -187,12 +187,9 @@ const deployedContracts = {
         },
       ],
       inheritedFunctions: {
-        owner:
-          "@openzeppelin/contracts-upgradeable/access/OwnableUpgradeable.sol",
-        renounceOwnership:
-          "@openzeppelin/contracts-upgradeable/access/OwnableUpgradeable.sol",
-        transferOwnership:
-          "@openzeppelin/contracts-upgradeable/access/OwnableUpgradeable.sol",
+        owner: "@openzeppelin/contracts-upgradeable/access/OwnableUpgradeable.sol",
+        renounceOwnership: "@openzeppelin/contracts-upgradeable/access/OwnableUpgradeable.sol",
+        transferOwnership: "@openzeppelin/contracts-upgradeable/access/OwnableUpgradeable.sol",
       },
     },
     ProjectRegistry: {
@@ -711,14 +708,10 @@ const deployedContracts = {
       inheritedFunctions: {
         create: "contracts/votingStrategy/IVotingStrategyFactory.sol",
         initialize: "contracts/votingStrategy/IVotingStrategyFactory.sol",
-        updateVotingContract:
-          "contracts/votingStrategy/IVotingStrategyFactory.sol",
-        owner:
-          "@openzeppelin/contracts-upgradeable/access/OwnableUpgradeable.sol",
-        renounceOwnership:
-          "@openzeppelin/contracts-upgradeable/access/OwnableUpgradeable.sol",
-        transferOwnership:
-          "@openzeppelin/contracts-upgradeable/access/OwnableUpgradeable.sol",
+        updateVotingContract: "contracts/votingStrategy/IVotingStrategyFactory.sol",
+        owner: "@openzeppelin/contracts-upgradeable/access/OwnableUpgradeable.sol",
+        renounceOwnership: "@openzeppelin/contracts-upgradeable/access/OwnableUpgradeable.sol",
+        transferOwnership: "@openzeppelin/contracts-upgradeable/access/OwnableUpgradeable.sol",
       },
     },
     QuadraticFundingVotingStrategyImplementation: {
@@ -1091,12 +1084,9 @@ const deployedContracts = {
         initialize: "contracts/round/IRoundFactory.sol",
         updateAlloSettings: "contracts/round/IRoundFactory.sol",
         updateRoundImplementation: "contracts/round/IRoundFactory.sol",
-        owner:
-          "@openzeppelin/contracts-upgradeable/access/OwnableUpgradeable.sol",
-        renounceOwnership:
-          "@openzeppelin/contracts-upgradeable/access/OwnableUpgradeable.sol",
-        transferOwnership:
-          "@openzeppelin/contracts-upgradeable/access/OwnableUpgradeable.sol",
+        owner: "@openzeppelin/contracts-upgradeable/access/OwnableUpgradeable.sol",
+        renounceOwnership: "@openzeppelin/contracts-upgradeable/access/OwnableUpgradeable.sol",
+        transferOwnership: "@openzeppelin/contracts-upgradeable/access/OwnableUpgradeable.sol",
       },
     },
     RoundImplementation: {
@@ -2307,8 +2297,7 @@ const deployedContracts = {
       ],
       inheritedFunctions: {
         applyToRound: "contracts/round/IRoundImplementation.sol",
-        getApplicationIndexesByProjectID:
-          "contracts/round/IRoundImplementation.sol",
+        getApplicationIndexesByProjectID: "contracts/round/IRoundImplementation.sol",
         getApplicationStatus: "contracts/round/IRoundImplementation.sol",
         initialize: "contracts/round/IRoundImplementation.sol",
         setApplicationStatuses: "contracts/round/IRoundImplementation.sol",
@@ -2321,26 +2310,16 @@ const deployedContracts = {
         updateStartAndEndTimes: "contracts/round/IRoundImplementation.sol",
         vote: "contracts/round/IRoundImplementation.sol",
         withdraw: "contracts/round/IRoundImplementation.sol",
-        DEFAULT_ADMIN_ROLE:
-          "@openzeppelin/contracts-upgradeable/access/AccessControlEnumerableUpgradeable.sol",
-        getRoleAdmin:
-          "@openzeppelin/contracts-upgradeable/access/AccessControlEnumerableUpgradeable.sol",
-        getRoleMember:
-          "@openzeppelin/contracts-upgradeable/access/AccessControlEnumerableUpgradeable.sol",
-        getRoleMemberCount:
-          "@openzeppelin/contracts-upgradeable/access/AccessControlEnumerableUpgradeable.sol",
-        grantRole:
-          "@openzeppelin/contracts-upgradeable/access/AccessControlEnumerableUpgradeable.sol",
-        hasRole:
-          "@openzeppelin/contracts-upgradeable/access/AccessControlEnumerableUpgradeable.sol",
-        renounceRole:
-          "@openzeppelin/contracts-upgradeable/access/AccessControlEnumerableUpgradeable.sol",
-        revokeRole:
-          "@openzeppelin/contracts-upgradeable/access/AccessControlEnumerableUpgradeable.sol",
-        supportsInterface:
-          "@openzeppelin/contracts-upgradeable/access/AccessControlEnumerableUpgradeable.sol",
-        multicall:
-          "@openzeppelin/contracts-upgradeable/utils/MulticallUpgradeable.sol",
+        DEFAULT_ADMIN_ROLE: "@openzeppelin/contracts-upgradeable/access/AccessControlEnumerableUpgradeable.sol",
+        getRoleAdmin: "@openzeppelin/contracts-upgradeable/access/AccessControlEnumerableUpgradeable.sol",
+        getRoleMember: "@openzeppelin/contracts-upgradeable/access/AccessControlEnumerableUpgradeable.sol",
+        getRoleMemberCount: "@openzeppelin/contracts-upgradeable/access/AccessControlEnumerableUpgradeable.sol",
+        grantRole: "@openzeppelin/contracts-upgradeable/access/AccessControlEnumerableUpgradeable.sol",
+        hasRole: "@openzeppelin/contracts-upgradeable/access/AccessControlEnumerableUpgradeable.sol",
+        renounceRole: "@openzeppelin/contracts-upgradeable/access/AccessControlEnumerableUpgradeable.sol",
+        revokeRole: "@openzeppelin/contracts-upgradeable/access/AccessControlEnumerableUpgradeable.sol",
+        supportsInterface: "@openzeppelin/contracts-upgradeable/access/AccessControlEnumerableUpgradeable.sol",
+        multicall: "@openzeppelin/contracts-upgradeable/utils/MulticallUpgradeable.sol",
       },
     },
   },

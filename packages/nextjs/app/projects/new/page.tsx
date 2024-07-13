@@ -1,5 +1,4 @@
 import ProjectCreateForm from "~~/components/ProjectCreateForm";
-import { createProject } from "~~/utils/actions";
 
 export default function NewProjectPage() {
   return (
@@ -9,7 +8,7 @@ export default function NewProjectPage() {
           <h2 className="card-title">New project</h2>
 
           <div className="card-actions flex flex-col">
-            <ProjectCreateForm createProject={createProject} />
+            <ProjectCreateForm />
           </div>
         </div>
       </div>
