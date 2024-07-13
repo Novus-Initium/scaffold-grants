@@ -30,7 +30,7 @@ function formatProjectData(formData: FormData) {
 }
 
 export default function ProjectCreateForm() {
-  const { writeContractAsync, isMining } = useScaffoldWriteContract("ProjectRegistry");
+  const { writeContractAsync } = useScaffoldWriteContract("ProjectRegistry");
 
   async function createProject(formData: FormData) {
     const projectData = formatProjectData(formData);
