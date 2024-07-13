@@ -32,7 +32,6 @@ const Home: NextPage = () => {
                       Check out our Github
                     </button>
                   </Link>
-                  <CodeBracketSquareIcon className="h-8 w-8 fill-accent-content" />
                   <p className="flex font-extrabold text-lg leading-relaxed mb-0 text-center">
                     Scaffold Grant Stacks
                   </p>
