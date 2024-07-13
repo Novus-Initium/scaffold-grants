@@ -24,12 +24,8 @@ export const menuLinks: HeaderMenuLink[] = [
     href: "/projects",
   },
   {
-    label: "Grants",
+    label: "Grant-Rounds",
     href: "/grants",
-  },
-  {
-    label: "Manager",
-    href: "/manager",
   },
   {
     label: "About",
@@ -101,7 +97,7 @@ export const Header = () => {
         </div>
         <Link href="/" passHref className="hidden lg:flex items-center gap-2 ml-4 mr-6 shrink-0">
           <div className="flex relative w-10 h-10">
-            <Image alt="SE2 logo" className="cursor-pointer" fill src="/IMPsLogo.svg" />
+            <Image alt="SE2 logo" className="cursor-pointer" fill src="/V3.png" />
           </div>
           <div className="flex flex-col">
             <span className="font-bold leading-tight">Scaffold</span>

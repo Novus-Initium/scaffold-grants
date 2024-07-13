@@ -16,7 +16,7 @@ const Home: NextPage = () => {
           </h1>
           <div className="avatar justify-center flex py-4">
             <div className="w-24 rounded-md">
-              <img src="/IMPsLogo.svg"/>
+              <img src="/v3.png"/>
             </div>
           </div>
           <div className="bg-secondary-100 flex flex-col items-center justify-center">
