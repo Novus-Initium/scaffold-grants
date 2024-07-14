@@ -19,7 +19,7 @@ const Home: NextPage = () => {
                 <h1 className="card-title text-3xl font-extrabold text-secondary">Our Mission</h1>
                 <div className="card-actions flex-col items-center rounded-md mb-12">
                   <p className="flex text-lg leading-relaxed mb-3 text-center font-medium">
-                    At Scaffold Grant Stack, we aim to provide a simple and easy-to-use SDK for developers to build
+                    At Nouns Grant Stack, we aim to provide a simple and easy-to-use SDK for developers to build
                     grant stacks on any EVM blockchain. Our SDK is designed to be modular and flexible, allowing
                     developers to easily create and deploy custom grant stacks for their projects.
                   </p>
