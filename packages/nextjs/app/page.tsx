@@ -1,10 +1,16 @@
 "use client";
 
-import Head from 'next/head';
+import Head from "next/head";
+import Image from "next/image";
 import Link from "next/link";
 import type { NextPage } from "next";
-import { useAccount } from "wagmi";
-import { DocumentMagnifyingGlassIcon, PlusCircleIcon, BanknotesIcon, UserGroupIcon, BuildingLibraryIcon, MagnifyingGlassCircleIcon } from "@heroicons/react/24/outline";
+import {
+  BanknotesIcon,
+  BuildingLibraryIcon,
+  MagnifyingGlassCircleIcon,
+  PlusCircleIcon,
+  UserGroupIcon,
+} from "@heroicons/react/24/outline";
 
 const Home: NextPage = () => {
   return (
@@ -17,12 +23,15 @@ const Home: NextPage = () => {
           <h1 className="text-center">
             <span className="block text-3xl mb-2 secondary-100">Nouns Grant Stack</span>
             <span className="block text-2xl text-secondary-200 font-bold">
-              <div class="avatar">
-                <div class="w-6 rounded"><img src="/favicon.png"/>
+              <div className="avatar">
+                <div className="w-6 rounded">
+                  <Image src="/favicon.png" alt="ico" />
                 </div>
-              </div> Fund A Noun and Find Out  
-              <div class="avatar">
-                <div class="w-6 rounded"><img src="IMPslogo.svg"/>
+              </div>
+              Fund A Noun and Find Out
+              <div className="avatar">
+                <div className="w-6 rounded">
+                  <Image src="/favicon.png" alt="ico" />
                 </div>
               </div>
             </span>

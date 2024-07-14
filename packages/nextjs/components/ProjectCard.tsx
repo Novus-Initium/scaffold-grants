@@ -1,13 +1,6 @@
 import type { Project } from "~~/types/grantStack";
 
-export default function ProjectCard({
-  name,
-  description,
-  website,
-  twitterHandle,
-  githubUsername,
-  githubOrganization,
-}: Project) {
+export default function ProjectCard({ name, description }: Project) {
   return (
     <div className="card bg-base-100 w-96 shadow-xl">
       <div className="card-body">

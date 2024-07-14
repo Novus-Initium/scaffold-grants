@@ -1,6 +1,7 @@
 "use client";
-import Head from 'next/head';
-import Link from 'next/link';
+
+import Head from "next/head";
+import Link from "next/link";
 
 const ProjectsPage = () => {
   return (
@@ -32,6 +33,6 @@ const ProjectsPage = () => {
       </div>
     </div>
   );
-}
+};
 
 export default ProjectsPage;
