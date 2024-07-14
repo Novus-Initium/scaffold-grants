@@ -12,7 +12,7 @@ import { useScaffoldWriteContract } from "~~/hooks/scaffold-eth";
 import { notification } from "~~/utils/scaffold-eth";
 
 // Define AddressZero manually
-const AddressZero = "0x0000000000000000000000000000000000000000";
+const AddressZero = "0x34182d56d905a195524a8F1813180C134687ca34";
 
 const CreateRoundForm: React.FC = () => {
   const [name, setName] = useState<string>("");
@@ -235,7 +235,7 @@ const CreateRoundForm: React.FC = () => {
       </div>
       <div>
         <label htmlFor="token" className="block text-sm font-medium text-white">
-          Token Address (use 0x000...000 for ETH)
+          Token Address (Nounish)
         </label>
         <input
           id="token"
