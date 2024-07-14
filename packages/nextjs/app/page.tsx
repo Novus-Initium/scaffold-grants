@@ -23,16 +23,10 @@ const Home: NextPage = () => {
           <h1 className="text-center">
             <span className="block text-3xl mb-2 secondary-100">Nouns Grant Stack</span>
             <span className="block text-2xl text-secondary-200 font-bold">
-              <div className="avatar">
-                <div className="w-6 rounded">
-                  <Image src="/favicon.png" alt="ico" />
-                </div>
-              </div>
-              Fund A Noun and Find Out
-              <div className="avatar">
-                <div className="w-6 rounded">
-                  <Image src="/favicon.png" alt="ico" />
-                </div>
+              <div className="flex items-center gap-4">
+                <Image src="/favicon.png" alt="ico" width={24} height={24} />
+                Fund A Noun and Find Out
+                <Image src="/favicon.png" alt="ico" width={24} height={24} />
               </div>
             </span>
           </h1>
