@@ -19,12 +19,17 @@ const deployQuadraticFundingFactory: DeployFunction = async function (hre: Hardh
   const quadraticFundingVotingStrategyImplementation = await get("QuadraticFundingVotingStrategyImplementation");
 
   // Initialize the ProgramFactory contract
-  const quadraticFundingFactory = await ethers.getContractAt("QuadraticFundingVotingStrategyFactory", quadraticFundingFactoryDeployment.address);
+  const quadraticFundingFactory = await ethers.getContractAt(
+    "QuadraticFundingVotingStrategyFactory",
+    quadraticFundingFactoryDeployment.address,
+  );
   const tx = await quadraticFundingFactory.initialize();
   await tx.wait();
 
   // Update the QuadraticFundingVotingStrategyFactory with the QuadraticFundingVotingStrategyImplementation address
-  const updateTx = await quadraticFundingFactory.updateVotingContract(quadraticFundingVotingStrategyImplementation.address);
+  const updateTx = await quadraticFundingFactory.updateVotingContract(
+    quadraticFundingVotingStrategyImplementation.address,
+  );
   await updateTx.wait();
 };
 

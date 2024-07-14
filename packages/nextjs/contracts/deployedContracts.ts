@@ -7,7 +7,7 @@ import { GenericContractsDeclaration } from "~~/utils/scaffold-eth/contract";
 const deployedContracts = {
   31337: {
     AlloSettings: {
-      address: "0x5FC8d32690cc91D4c39d9d3abcBD16989F875707",
+      address: "0xB0D4afd8879eD9F52b28595d31B441D079B2Ca07",
       abi: [
         {
           anonymous: false,
@@ -195,8 +195,526 @@ const deployedContracts = {
           "@openzeppelin/contracts-upgradeable/access/OwnableUpgradeable.sol",
       },
     },
+    MerklePayoutStrategyFactory: {
+      address: "0xFD471836031dc5108809D173A067e8486B9047A3",
+      abi: [
+        {
+          anonymous: false,
+          inputs: [
+            {
+              indexed: false,
+              internalType: "uint8",
+              name: "version",
+              type: "uint8",
+            },
+          ],
+          name: "Initialized",
+          type: "event",
+        },
+        {
+          anonymous: false,
+          inputs: [
+            {
+              indexed: true,
+              internalType: "address",
+              name: "previousOwner",
+              type: "address",
+            },
+            {
+              indexed: true,
+              internalType: "address",
+              name: "newOwner",
+              type: "address",
+            },
+          ],
+          name: "OwnershipTransferred",
+          type: "event",
+        },
+        {
+          anonymous: false,
+          inputs: [
+            {
+              indexed: true,
+              internalType: "address",
+              name: "payoutContractAddress",
+              type: "address",
+            },
+            {
+              indexed: true,
+              internalType: "address",
+              name: "payoutImplementation",
+              type: "address",
+            },
+          ],
+          name: "PayoutContractCreated",
+          type: "event",
+        },
+        {
+          anonymous: false,
+          inputs: [
+            {
+              indexed: false,
+              internalType: "address",
+              name: "merklePayoutStrategyAddress",
+              type: "address",
+            },
+          ],
+          name: "PayoutImplementationUpdated",
+          type: "event",
+        },
+        {
+          inputs: [],
+          name: "create",
+          outputs: [
+            {
+              internalType: "address",
+              name: "",
+              type: "address",
+            },
+          ],
+          stateMutability: "nonpayable",
+          type: "function",
+        },
+        {
+          inputs: [],
+          name: "initialize",
+          outputs: [],
+          stateMutability: "nonpayable",
+          type: "function",
+        },
+        {
+          inputs: [],
+          name: "nonce",
+          outputs: [
+            {
+              internalType: "uint256",
+              name: "",
+              type: "uint256",
+            },
+          ],
+          stateMutability: "view",
+          type: "function",
+        },
+        {
+          inputs: [],
+          name: "owner",
+          outputs: [
+            {
+              internalType: "address",
+              name: "",
+              type: "address",
+            },
+          ],
+          stateMutability: "view",
+          type: "function",
+        },
+        {
+          inputs: [],
+          name: "payoutImplementation",
+          outputs: [
+            {
+              internalType: "address payable",
+              name: "",
+              type: "address",
+            },
+          ],
+          stateMutability: "view",
+          type: "function",
+        },
+        {
+          inputs: [],
+          name: "renounceOwnership",
+          outputs: [],
+          stateMutability: "nonpayable",
+          type: "function",
+        },
+        {
+          inputs: [
+            {
+              internalType: "address",
+              name: "newOwner",
+              type: "address",
+            },
+          ],
+          name: "transferOwnership",
+          outputs: [],
+          stateMutability: "nonpayable",
+          type: "function",
+        },
+        {
+          inputs: [
+            {
+              internalType: "address payable",
+              name: "newPayoutImplementation",
+              type: "address",
+            },
+          ],
+          name: "updatePayoutImplementation",
+          outputs: [],
+          stateMutability: "nonpayable",
+          type: "function",
+        },
+      ],
+      inheritedFunctions: {
+        create: "contracts/payoutStrategy/IPayoutStrategyFactory.sol",
+        initialize: "contracts/payoutStrategy/IPayoutStrategyFactory.sol",
+        updatePayoutImplementation:
+          "contracts/payoutStrategy/IPayoutStrategyFactory.sol",
+        owner:
+          "@openzeppelin/contracts-upgradeable/access/OwnableUpgradeable.sol",
+        renounceOwnership:
+          "@openzeppelin/contracts-upgradeable/access/OwnableUpgradeable.sol",
+        transferOwnership:
+          "@openzeppelin/contracts-upgradeable/access/OwnableUpgradeable.sol",
+      },
+    },
+    MerklePayoutStrategyImplementation: {
+      address: "0xc351628EB244ec633d5f21fBD6621e1a683B1181",
+      abi: [
+        {
+          anonymous: false,
+          inputs: [
+            {
+              indexed: true,
+              internalType: "address",
+              name: "sender",
+              type: "address",
+            },
+          ],
+          name: "BatchPayoutSuccessful",
+          type: "event",
+        },
+        {
+          anonymous: false,
+          inputs: [
+            {
+              indexed: false,
+              internalType: "bytes32",
+              name: "merkleRoot",
+              type: "bytes32",
+            },
+            {
+              components: [
+                {
+                  internalType: "uint256",
+                  name: "protocol",
+                  type: "uint256",
+                },
+                {
+                  internalType: "string",
+                  name: "pointer",
+                  type: "string",
+                },
+              ],
+              indexed: false,
+              internalType: "struct MetaPtr",
+              name: "distributionMetaPtr",
+              type: "tuple",
+            },
+          ],
+          name: "DistributionUpdated",
+          type: "event",
+        },
+        {
+          anonymous: false,
+          inputs: [
+            {
+              indexed: false,
+              internalType: "uint256",
+              name: "amount",
+              type: "uint256",
+            },
+            {
+              indexed: false,
+              internalType: "address",
+              name: "grantee",
+              type: "address",
+            },
+            {
+              indexed: true,
+              internalType: "address",
+              name: "token",
+              type: "address",
+            },
+            {
+              indexed: true,
+              internalType: "bytes32",
+              name: "projectId",
+              type: "bytes32",
+            },
+          ],
+          name: "FundsDistributed",
+          type: "event",
+        },
+        {
+          anonymous: false,
+          inputs: [
+            {
+              indexed: true,
+              internalType: "address",
+              name: "tokenAddress",
+              type: "address",
+            },
+            {
+              indexed: false,
+              internalType: "uint256",
+              name: "amount",
+              type: "uint256",
+            },
+            {
+              indexed: false,
+              internalType: "address",
+              name: "withdrawAddress",
+              type: "address",
+            },
+          ],
+          name: "FundsWithdrawn",
+          type: "event",
+        },
+        {
+          anonymous: false,
+          inputs: [
+            {
+              indexed: false,
+              internalType: "uint8",
+              name: "version",
+              type: "uint8",
+            },
+          ],
+          name: "Initialized",
+          type: "event",
+        },
+        {
+          anonymous: false,
+          inputs: [],
+          name: "ReadyForPayout",
+          type: "event",
+        },
+        {
+          inputs: [],
+          name: "ROUND_OPERATOR_ROLE",
+          outputs: [
+            {
+              internalType: "bytes32",
+              name: "",
+              type: "bytes32",
+            },
+          ],
+          stateMutability: "view",
+          type: "function",
+        },
+        {
+          inputs: [],
+          name: "VERSION",
+          outputs: [
+            {
+              internalType: "string",
+              name: "",
+              type: "string",
+            },
+          ],
+          stateMutability: "view",
+          type: "function",
+        },
+        {
+          inputs: [],
+          name: "distributionMetaPtr",
+          outputs: [
+            {
+              internalType: "uint256",
+              name: "protocol",
+              type: "uint256",
+            },
+            {
+              internalType: "string",
+              name: "pointer",
+              type: "string",
+            },
+          ],
+          stateMutability: "view",
+          type: "function",
+        },
+        {
+          inputs: [
+            {
+              internalType: "uint256",
+              name: "_index",
+              type: "uint256",
+            },
+          ],
+          name: "hasBeenDistributed",
+          outputs: [
+            {
+              internalType: "bool",
+              name: "",
+              type: "bool",
+            },
+          ],
+          stateMutability: "view",
+          type: "function",
+        },
+        {
+          inputs: [],
+          name: "init",
+          outputs: [],
+          stateMutability: "nonpayable",
+          type: "function",
+        },
+        {
+          inputs: [],
+          name: "initialize",
+          outputs: [],
+          stateMutability: "nonpayable",
+          type: "function",
+        },
+        {
+          inputs: [],
+          name: "isDistributionSet",
+          outputs: [
+            {
+              internalType: "bool",
+              name: "",
+              type: "bool",
+            },
+          ],
+          stateMutability: "view",
+          type: "function",
+        },
+        {
+          inputs: [],
+          name: "isReadyForPayout",
+          outputs: [
+            {
+              internalType: "bool",
+              name: "",
+              type: "bool",
+            },
+          ],
+          stateMutability: "view",
+          type: "function",
+        },
+        {
+          inputs: [],
+          name: "merkleRoot",
+          outputs: [
+            {
+              internalType: "bytes32",
+              name: "",
+              type: "bytes32",
+            },
+          ],
+          stateMutability: "view",
+          type: "function",
+        },
+        {
+          inputs: [
+            {
+              components: [
+                {
+                  internalType: "uint256",
+                  name: "index",
+                  type: "uint256",
+                },
+                {
+                  internalType: "address",
+                  name: "grantee",
+                  type: "address",
+                },
+                {
+                  internalType: "uint256",
+                  name: "amount",
+                  type: "uint256",
+                },
+                {
+                  internalType: "bytes32[]",
+                  name: "merkleProof",
+                  type: "bytes32[]",
+                },
+                {
+                  internalType: "bytes32",
+                  name: "projectId",
+                  type: "bytes32",
+                },
+              ],
+              internalType:
+                "struct MerklePayoutStrategyImplementation.Distribution[]",
+              name: "_distributions",
+              type: "tuple[]",
+            },
+          ],
+          name: "payout",
+          outputs: [],
+          stateMutability: "payable",
+          type: "function",
+        },
+        {
+          inputs: [],
+          name: "roundAddress",
+          outputs: [
+            {
+              internalType: "address payable",
+              name: "",
+              type: "address",
+            },
+          ],
+          stateMutability: "view",
+          type: "function",
+        },
+        {
+          inputs: [],
+          name: "setReadyForPayout",
+          outputs: [],
+          stateMutability: "payable",
+          type: "function",
+        },
+        {
+          inputs: [],
+          name: "tokenAddress",
+          outputs: [
+            {
+              internalType: "address",
+              name: "",
+              type: "address",
+            },
+          ],
+          stateMutability: "view",
+          type: "function",
+        },
+        {
+          inputs: [
+            {
+              internalType: "bytes",
+              name: "encodedDistribution",
+              type: "bytes",
+            },
+          ],
+          name: "updateDistribution",
+          outputs: [],
+          stateMutability: "nonpayable",
+          type: "function",
+        },
+        {
+          inputs: [
+            {
+              internalType: "address payable",
+              name: "withdrawAddress",
+              type: "address",
+            },
+          ],
+          name: "withdrawFunds",
+          outputs: [],
+          stateMutability: "payable",
+          type: "function",
+        },
+        {
+          stateMutability: "payable",
+          type: "receive",
+        },
+      ],
+      inheritedFunctions: {},
+    },
     ProjectRegistry: {
-      address: "0x5FbDB2315678afecb367f032d93F642f64180aa3",
+      address: "0xCD8a1C3ba11CF5ECfa6267617243239504a98d90",
       abi: [
         {
           anonymous: false,
@@ -549,7 +1067,7 @@ const deployedContracts = {
       inheritedFunctions: {},
     },
     QuadraticFundingVotingStrategyFactory: {
-      address: "0x9fE46736679d2D9a65F0992F2272dE9f3c7fa6e0",
+      address: "0x2bdCC0de6bE1f7D2ee689a0342D76F52E8EFABa3",
       abi: [
         {
           anonymous: false,
@@ -722,7 +1240,7 @@ const deployedContracts = {
       },
     },
     QuadraticFundingVotingStrategyImplementation: {
-      address: "0xe7f1725E7734CE288F8367e1Bb143E90bb3F0512",
+      address: "0x82e01223d51Eb87e16A03E24687EDF0F294da6f1",
       abi: [
         {
           anonymous: false,
@@ -858,7 +1376,7 @@ const deployedContracts = {
       },
     },
     RoundFactory: {
-      address: "0x610178dA211FEF7D417bC0e6FeD39F05609AD788",
+      address: "0xdbC43Ba45381e02825b14322cDdd15eC4B3164E6",
       abi: [
         {
           anonymous: false,
@@ -1100,7 +1618,7 @@ const deployedContracts = {
       },
     },
     RoundImplementation: {
-      address: "0x8A791620dd6260079BF849Dc5567aDC3F2FdC318",
+      address: "0x1fA02b2d6A771842690194Cf62D91bdd92BfE28d",
       abi: [
         {
           anonymous: false,
@@ -2346,7 +2864,7 @@ const deployedContracts = {
   },
   11155111: {
     AlloSettings: {
-      address: "0x7491C90debd6AC218ee26AC6462004e6F0a08909",
+      address: "0x3B6009c441Fd9FDBE58C54218868FF266726da12",
       abi: [
         {
           anonymous: false,
@@ -2534,8 +3052,526 @@ const deployedContracts = {
           "@openzeppelin/contracts-upgradeable/access/OwnableUpgradeable.sol",
       },
     },
+    MerklePayoutStrategyFactory: {
+      address: "0x4796746ef9099cA0CF64E4F32D14E0D43bcb7ED5",
+      abi: [
+        {
+          anonymous: false,
+          inputs: [
+            {
+              indexed: false,
+              internalType: "uint8",
+              name: "version",
+              type: "uint8",
+            },
+          ],
+          name: "Initialized",
+          type: "event",
+        },
+        {
+          anonymous: false,
+          inputs: [
+            {
+              indexed: true,
+              internalType: "address",
+              name: "previousOwner",
+              type: "address",
+            },
+            {
+              indexed: true,
+              internalType: "address",
+              name: "newOwner",
+              type: "address",
+            },
+          ],
+          name: "OwnershipTransferred",
+          type: "event",
+        },
+        {
+          anonymous: false,
+          inputs: [
+            {
+              indexed: true,
+              internalType: "address",
+              name: "payoutContractAddress",
+              type: "address",
+            },
+            {
+              indexed: true,
+              internalType: "address",
+              name: "payoutImplementation",
+              type: "address",
+            },
+          ],
+          name: "PayoutContractCreated",
+          type: "event",
+        },
+        {
+          anonymous: false,
+          inputs: [
+            {
+              indexed: false,
+              internalType: "address",
+              name: "merklePayoutStrategyAddress",
+              type: "address",
+            },
+          ],
+          name: "PayoutImplementationUpdated",
+          type: "event",
+        },
+        {
+          inputs: [],
+          name: "create",
+          outputs: [
+            {
+              internalType: "address",
+              name: "",
+              type: "address",
+            },
+          ],
+          stateMutability: "nonpayable",
+          type: "function",
+        },
+        {
+          inputs: [],
+          name: "initialize",
+          outputs: [],
+          stateMutability: "nonpayable",
+          type: "function",
+        },
+        {
+          inputs: [],
+          name: "nonce",
+          outputs: [
+            {
+              internalType: "uint256",
+              name: "",
+              type: "uint256",
+            },
+          ],
+          stateMutability: "view",
+          type: "function",
+        },
+        {
+          inputs: [],
+          name: "owner",
+          outputs: [
+            {
+              internalType: "address",
+              name: "",
+              type: "address",
+            },
+          ],
+          stateMutability: "view",
+          type: "function",
+        },
+        {
+          inputs: [],
+          name: "payoutImplementation",
+          outputs: [
+            {
+              internalType: "address payable",
+              name: "",
+              type: "address",
+            },
+          ],
+          stateMutability: "view",
+          type: "function",
+        },
+        {
+          inputs: [],
+          name: "renounceOwnership",
+          outputs: [],
+          stateMutability: "nonpayable",
+          type: "function",
+        },
+        {
+          inputs: [
+            {
+              internalType: "address",
+              name: "newOwner",
+              type: "address",
+            },
+          ],
+          name: "transferOwnership",
+          outputs: [],
+          stateMutability: "nonpayable",
+          type: "function",
+        },
+        {
+          inputs: [
+            {
+              internalType: "address payable",
+              name: "newPayoutImplementation",
+              type: "address",
+            },
+          ],
+          name: "updatePayoutImplementation",
+          outputs: [],
+          stateMutability: "nonpayable",
+          type: "function",
+        },
+      ],
+      inheritedFunctions: {
+        create: "contracts/payoutStrategy/IPayoutStrategyFactory.sol",
+        initialize: "contracts/payoutStrategy/IPayoutStrategyFactory.sol",
+        updatePayoutImplementation:
+          "contracts/payoutStrategy/IPayoutStrategyFactory.sol",
+        owner:
+          "@openzeppelin/contracts-upgradeable/access/OwnableUpgradeable.sol",
+        renounceOwnership:
+          "@openzeppelin/contracts-upgradeable/access/OwnableUpgradeable.sol",
+        transferOwnership:
+          "@openzeppelin/contracts-upgradeable/access/OwnableUpgradeable.sol",
+      },
+    },
+    MerklePayoutStrategyImplementation: {
+      address: "0x81DB65C75889323687aB1e520257FD6544F8BD66",
+      abi: [
+        {
+          anonymous: false,
+          inputs: [
+            {
+              indexed: true,
+              internalType: "address",
+              name: "sender",
+              type: "address",
+            },
+          ],
+          name: "BatchPayoutSuccessful",
+          type: "event",
+        },
+        {
+          anonymous: false,
+          inputs: [
+            {
+              indexed: false,
+              internalType: "bytes32",
+              name: "merkleRoot",
+              type: "bytes32",
+            },
+            {
+              components: [
+                {
+                  internalType: "uint256",
+                  name: "protocol",
+                  type: "uint256",
+                },
+                {
+                  internalType: "string",
+                  name: "pointer",
+                  type: "string",
+                },
+              ],
+              indexed: false,
+              internalType: "struct MetaPtr",
+              name: "distributionMetaPtr",
+              type: "tuple",
+            },
+          ],
+          name: "DistributionUpdated",
+          type: "event",
+        },
+        {
+          anonymous: false,
+          inputs: [
+            {
+              indexed: false,
+              internalType: "uint256",
+              name: "amount",
+              type: "uint256",
+            },
+            {
+              indexed: false,
+              internalType: "address",
+              name: "grantee",
+              type: "address",
+            },
+            {
+              indexed: true,
+              internalType: "address",
+              name: "token",
+              type: "address",
+            },
+            {
+              indexed: true,
+              internalType: "bytes32",
+              name: "projectId",
+              type: "bytes32",
+            },
+          ],
+          name: "FundsDistributed",
+          type: "event",
+        },
+        {
+          anonymous: false,
+          inputs: [
+            {
+              indexed: true,
+              internalType: "address",
+              name: "tokenAddress",
+              type: "address",
+            },
+            {
+              indexed: false,
+              internalType: "uint256",
+              name: "amount",
+              type: "uint256",
+            },
+            {
+              indexed: false,
+              internalType: "address",
+              name: "withdrawAddress",
+              type: "address",
+            },
+          ],
+          name: "FundsWithdrawn",
+          type: "event",
+        },
+        {
+          anonymous: false,
+          inputs: [
+            {
+              indexed: false,
+              internalType: "uint8",
+              name: "version",
+              type: "uint8",
+            },
+          ],
+          name: "Initialized",
+          type: "event",
+        },
+        {
+          anonymous: false,
+          inputs: [],
+          name: "ReadyForPayout",
+          type: "event",
+        },
+        {
+          inputs: [],
+          name: "ROUND_OPERATOR_ROLE",
+          outputs: [
+            {
+              internalType: "bytes32",
+              name: "",
+              type: "bytes32",
+            },
+          ],
+          stateMutability: "view",
+          type: "function",
+        },
+        {
+          inputs: [],
+          name: "VERSION",
+          outputs: [
+            {
+              internalType: "string",
+              name: "",
+              type: "string",
+            },
+          ],
+          stateMutability: "view",
+          type: "function",
+        },
+        {
+          inputs: [],
+          name: "distributionMetaPtr",
+          outputs: [
+            {
+              internalType: "uint256",
+              name: "protocol",
+              type: "uint256",
+            },
+            {
+              internalType: "string",
+              name: "pointer",
+              type: "string",
+            },
+          ],
+          stateMutability: "view",
+          type: "function",
+        },
+        {
+          inputs: [
+            {
+              internalType: "uint256",
+              name: "_index",
+              type: "uint256",
+            },
+          ],
+          name: "hasBeenDistributed",
+          outputs: [
+            {
+              internalType: "bool",
+              name: "",
+              type: "bool",
+            },
+          ],
+          stateMutability: "view",
+          type: "function",
+        },
+        {
+          inputs: [],
+          name: "init",
+          outputs: [],
+          stateMutability: "nonpayable",
+          type: "function",
+        },
+        {
+          inputs: [],
+          name: "initialize",
+          outputs: [],
+          stateMutability: "nonpayable",
+          type: "function",
+        },
+        {
+          inputs: [],
+          name: "isDistributionSet",
+          outputs: [
+            {
+              internalType: "bool",
+              name: "",
+              type: "bool",
+            },
+          ],
+          stateMutability: "view",
+          type: "function",
+        },
+        {
+          inputs: [],
+          name: "isReadyForPayout",
+          outputs: [
+            {
+              internalType: "bool",
+              name: "",
+              type: "bool",
+            },
+          ],
+          stateMutability: "view",
+          type: "function",
+        },
+        {
+          inputs: [],
+          name: "merkleRoot",
+          outputs: [
+            {
+              internalType: "bytes32",
+              name: "",
+              type: "bytes32",
+            },
+          ],
+          stateMutability: "view",
+          type: "function",
+        },
+        {
+          inputs: [
+            {
+              components: [
+                {
+                  internalType: "uint256",
+                  name: "index",
+                  type: "uint256",
+                },
+                {
+                  internalType: "address",
+                  name: "grantee",
+                  type: "address",
+                },
+                {
+                  internalType: "uint256",
+                  name: "amount",
+                  type: "uint256",
+                },
+                {
+                  internalType: "bytes32[]",
+                  name: "merkleProof",
+                  type: "bytes32[]",
+                },
+                {
+                  internalType: "bytes32",
+                  name: "projectId",
+                  type: "bytes32",
+                },
+              ],
+              internalType:
+                "struct MerklePayoutStrategyImplementation.Distribution[]",
+              name: "_distributions",
+              type: "tuple[]",
+            },
+          ],
+          name: "payout",
+          outputs: [],
+          stateMutability: "payable",
+          type: "function",
+        },
+        {
+          inputs: [],
+          name: "roundAddress",
+          outputs: [
+            {
+              internalType: "address payable",
+              name: "",
+              type: "address",
+            },
+          ],
+          stateMutability: "view",
+          type: "function",
+        },
+        {
+          inputs: [],
+          name: "setReadyForPayout",
+          outputs: [],
+          stateMutability: "payable",
+          type: "function",
+        },
+        {
+          inputs: [],
+          name: "tokenAddress",
+          outputs: [
+            {
+              internalType: "address",
+              name: "",
+              type: "address",
+            },
+          ],
+          stateMutability: "view",
+          type: "function",
+        },
+        {
+          inputs: [
+            {
+              internalType: "bytes",
+              name: "encodedDistribution",
+              type: "bytes",
+            },
+          ],
+          name: "updateDistribution",
+          outputs: [],
+          stateMutability: "nonpayable",
+          type: "function",
+        },
+        {
+          inputs: [
+            {
+              internalType: "address payable",
+              name: "withdrawAddress",
+              type: "address",
+            },
+          ],
+          name: "withdrawFunds",
+          outputs: [],
+          stateMutability: "payable",
+          type: "function",
+        },
+        {
+          stateMutability: "payable",
+          type: "receive",
+        },
+      ],
+      inheritedFunctions: {},
+    },
     ProjectRegistry: {
-      address: "0xFD0233ECc3bc7aC447C41E578b7F5ad88B8a86a7",
+      address: "0x6f05897DA699c79136caEaD81852620ab0E6C481",
       abi: [
         {
           anonymous: false,
@@ -2888,7 +3924,7 @@ const deployedContracts = {
       inheritedFunctions: {},
     },
     QuadraticFundingVotingStrategyFactory: {
-      address: "0x36832Fa4d08D4CE968b9C3FeF8D6F93c351BE0EF",
+      address: "0x17F1Ff465068E7a6907cd7c425477e25928Ce878",
       abi: [
         {
           anonymous: false,
@@ -3061,7 +4097,7 @@ const deployedContracts = {
       },
     },
     QuadraticFundingVotingStrategyImplementation: {
-      address: "0x5feB033f6b780Fa3852adcA06D8b5E8e6369ff5E",
+      address: "0x38fFB921C611c63433D26f3a6c2B1036cd6c362F",
       abi: [
         {
           anonymous: false,
@@ -3197,7 +4233,7 @@ const deployedContracts = {
       },
     },
     RoundFactory: {
-      address: "0xE737Fa7B2C811E1080C9DA658998baF0B4d06a51",
+      address: "0xD6733fbAC2861ecE02405459d63F20B8956B8FCd",
       abi: [
         {
           anonymous: false,
@@ -3439,7 +4475,7 @@ const deployedContracts = {
       },
     },
     RoundImplementation: {
-      address: "0x4e4b90D4f7Cbe829420ECC82F81158172E28e7bc",
+      address: "0x05B73b79F9d5025803EB0D7A1284A17099560600",
       abi: [
         {
           anonymous: false,

@@ -10,24 +10,23 @@ const deployAlloSettings: DeployFunction = async function (hre: HardhatRuntimeEn
   const { deploy } = hre.deployments;
 
   // Define your network-specific parameters
-  const AlloSettingsParams: { [key: string]: { protocolFeePercentage: number; protocolTreasury: string; } } = {
+  const AlloSettingsParams: { [key: string]: { protocolFeePercentage: number; protocolTreasury: string } } = {
     mainnet: {
       protocolFeePercentage: 100, // Example: 1%
-      protocolTreasury: process.env.MAINNET_TREASURY_ADDRESS || "0x8DE8260C05611426c9A11Bf63b794c7183f30ecB"
+      protocolTreasury: process.env.MAINNET_TREASURY_ADDRESS || "0x8DE8260C05611426c9A11Bf63b794c7183f30ecB",
     },
     sepolia: {
       protocolFeePercentage: 50, // Example: 0.5%
-      protocolTreasury: process.env.SEPOLIA_TREASURY_ADDRESS || "0x8DE8260C05611426c9A11Bf63b794c7183f30ecB"
+      protocolTreasury: process.env.SEPOLIA_TREASURY_ADDRESS || "0x8DE8260C05611426c9A11Bf63b794c7183f30ecB",
     },
     localhost: {
-        protocolFeePercentage: 50, // Example: 0.5%
-        protocolTreasury: process.env.HARDHAT_TREASURY_ADDRESS || "0x8DE8260C05611426c9A11Bf63b794c7183f30ecB"
-      },
+      protocolFeePercentage: 50, // Example: 0.5%
+      protocolTreasury: process.env.HARDHAT_TREASURY_ADDRESS || "0x8DE8260C05611426c9A11Bf63b794c7183f30ecB",
+    },
     doric: {
-        protocolFeePercentage: 50, // Example: 0.5%
-        protocolTreasury: process.env.HARDHAT_TREASURY_ADDRESS || "0x8DE8260C05611426c9A11Bf63b794c7183f30ecB"
-      }
-
+      protocolFeePercentage: 50, // Example: 0.5%
+      protocolTreasury: process.env.HARDHAT_TREASURY_ADDRESS || "0x8DE8260C05611426c9A11Bf63b794c7183f30ecB",
+    },
   };
 
   const networkParams = AlloSettingsParams[hre.network.name];

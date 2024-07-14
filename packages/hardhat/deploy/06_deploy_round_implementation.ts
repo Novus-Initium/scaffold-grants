@@ -13,7 +13,6 @@ const deployRoundImplementation: DeployFunction = async function (hre: HardhatRu
   });
 
   console.log("✅ Deployed RoundImplementation.");
-
 };
 
 export default deployRoundImplementation;

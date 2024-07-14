@@ -29,7 +29,6 @@ const deployRoundFactory: DeployFunction = async function (hre: HardhatRuntimeEn
 
   const alloSettingsContract = await get("AlloSettings");
 
-
   if (!alloSettingsContract) {
     throw new Error(`error: missing alloSettingsContract`);
   }

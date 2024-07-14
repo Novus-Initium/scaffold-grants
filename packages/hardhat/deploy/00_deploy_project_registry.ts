@@ -31,7 +31,6 @@ const deployRegistry: DeployFunction = async function (hre: HardhatRuntimeEnviro
   });
 
   console.log("✅ Deployed ProjectRegistry.");
-
 };
 
 export default deployRegistry;

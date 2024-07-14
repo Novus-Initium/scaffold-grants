@@ -13,7 +13,6 @@ const deployQFImplementation: DeployFunction = async function (hre: HardhatRunti
   });
 
   console.log("✅ Deployed QuadraticFundingVotingStrategyImplementation.");
-
 };
 
 export default deployQFImplementation;
