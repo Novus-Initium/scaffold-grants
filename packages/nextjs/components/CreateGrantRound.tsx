@@ -181,7 +181,7 @@ const CreateRoundForm: React.FC = () => {
       });
 
       // Call the contract method
-      const tx = await contract.create(encodedParameters, validateAddress(ownerAddress));
+      const tx = await contract.create(encodedParameters, validateAddress(ownerAddress), roundMetaPtrCID);
 
       notification.success(`Round created successfully/n${tx.hash}`);
     } catch (error: any) {

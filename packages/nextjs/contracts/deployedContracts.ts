@@ -2864,7 +2864,7 @@ const deployedContracts = {
   },
   11155111: {
     AlloSettings: {
-      address: "0x3B6009c441Fd9FDBE58C54218868FF266726da12",
+      address: "0x62d7C7A9c3eF0E5B1F6F81530c096B3BBD7C02D4",
       abi: [
         {
           anonymous: false,
@@ -3053,7 +3053,7 @@ const deployedContracts = {
       },
     },
     MerklePayoutStrategyFactory: {
-      address: "0x4796746ef9099cA0CF64E4F32D14E0D43bcb7ED5",
+      address: "0x9B60eAf0256582A14189fe50e52fdE0fa80e139e",
       abi: [
         {
           anonymous: false,
@@ -3226,7 +3226,7 @@ const deployedContracts = {
       },
     },
     MerklePayoutStrategyImplementation: {
-      address: "0x81DB65C75889323687aB1e520257FD6544F8BD66",
+      address: "0x0A38454c10E5ACafa1Cd7C69E081FB6cB4cb6d7B",
       abi: [
         {
           anonymous: false,
@@ -3571,7 +3571,7 @@ const deployedContracts = {
       inheritedFunctions: {},
     },
     ProjectRegistry: {
-      address: "0x6f05897DA699c79136caEaD81852620ab0E6C481",
+      address: "0xA0E36d43817BEF2C105B6857B2DcCE819d348351",
       abi: [
         {
           anonymous: false,
@@ -3924,7 +3924,7 @@ const deployedContracts = {
       inheritedFunctions: {},
     },
     QuadraticFundingVotingStrategyFactory: {
-      address: "0x17F1Ff465068E7a6907cd7c425477e25928Ce878",
+      address: "0xE0744D0be53160cEA5bE864403a7f986dA20e255",
       abi: [
         {
           anonymous: false,
@@ -4097,7 +4097,7 @@ const deployedContracts = {
       },
     },
     QuadraticFundingVotingStrategyImplementation: {
-      address: "0x38fFB921C611c63433D26f3a6c2B1036cd6c362F",
+      address: "0x69fe16B8CA3585637266cb55aAfcbC981c7708C0",
       abi: [
         {
           anonymous: false,
@@ -4233,7 +4233,7 @@ const deployedContracts = {
       },
     },
     RoundFactory: {
-      address: "0xD6733fbAC2861ecE02405459d63F20B8956B8FCd",
+      address: "0xEC912c549186db79CA1E486848775129E6647fD6",
       abi: [
         {
           anonymous: false,
@@ -4301,6 +4301,12 @@ const deployedContracts = {
               name: "roundImplementation",
               type: "address",
             },
+            {
+              indexed: false,
+              internalType: "string",
+              name: "roundMetaPointer",
+              type: "string",
+            },
           ],
           name: "RoundCreated",
           type: "event",
@@ -4355,6 +4361,11 @@ const deployedContracts = {
               internalType: "address",
               name: "ownedBy",
               type: "address",
+            },
+            {
+              internalType: "string",
+              name: "roundMetaPointer",
+              type: "string",
             },
           ],
           name: "create",
@@ -4475,7 +4486,7 @@ const deployedContracts = {
       },
     },
     RoundImplementation: {
-      address: "0x05B73b79F9d5025803EB0D7A1284A17099560600",
+      address: "0x2dbC1A705cC823Ea2C94e85d14d7cb5702a146fa",
       abi: [
         {
           anonymous: false,
