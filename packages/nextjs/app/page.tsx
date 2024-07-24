@@ -40,13 +40,13 @@ const Home: NextPage = () => {
                 </Link>
                 <UserGroupIcon className="h-8 w-8 fill-accent-content" />
                 <p>
-                  <b>Create</b> a Mission.
+                  <b>Create</b> a project
                 </p>
                 <p>
-                  <b>Manage</b> a Mission.
+                  <b>Manage</b> a project
                 </p>
                 <p>
-                  <b>Explore</b> current Projects.{" "}
+                  <b>Explore</b> current projects{" "}
                 </p>
                 <div className="card-actions">
                   <ul className="flex flex-row menu menu-horizontal bg-base-200 rounded-box mt-6">
@@ -76,13 +76,13 @@ const Home: NextPage = () => {
                 </Link>
                 <BanknotesIcon className="h-8 w-8 fill-accent-content" />
                 <p>
-                  <b>Create</b> a Grant Round.
+                  <b>Create</b> a Grant Round
                 </p>
                 <p>
-                  <b>Manage</b> a Round.
+                  <b>Manage</b> a Grant Round
                 </p>
                 <p>
-                  <b>Explore</b> live Rounds.{" "}
+                  <b>Explore</b> live Rounds{" "}
                 </p>
                 <div className="card-actions">
                   <ul className="menu menu-horizontal bg-base-200 rounded-box mt-6">
