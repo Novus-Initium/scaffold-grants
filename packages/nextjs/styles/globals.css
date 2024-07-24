@@ -1,16 +1,30 @@
 @import "tailwindcss/base";
 @import "tailwindcss/components";
 @import "tailwindcss/utilities";
+
 /* @import url("https://fonts.googleapis.com/css2?family=Londrina+Solid:wght@100;300;400;900&display=swap"); */
 
 @font-face {
   font-family: Londrina;
-  src: url("https://fonts.googleapis.com/css2?family=Londrina+Solid:wght@100;300;400;900&display=swap");
+  src: url("https://fonts.googleapis.com/css2?family=Londrina+Solid:wght@400;900&display=swap");
 }
 
 * {
-  font-family: Londrina;
+  font-family: "Londrina Solid", sans-serif;
+  font-weight: 400;
+  font-style: normal;
 }
+
+/* .londrina-solid-black {
+  font-family: "Londrina Solid", sans-serif;
+  font-weight: 900;
+  font-style: normal;
+} */
+
+
+/* * {
+  font-family: Londrina;
+} */
 
 :root,
 [data-theme] {
