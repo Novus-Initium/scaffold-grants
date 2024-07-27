@@ -4,29 +4,38 @@ module.exports = {
   plugins: [require("daisyui")],
   darkTheme: "dark",
   darkMode: ["selector", "[data-theme='dark']"],
+  styled: true, // include daisyUI colors and design decisions for all components
+  utils: true, // adds responsive and modifier utility classes
+  prefix: "", // prefix for daisyUI classnames (components, modifiers and responsive class names. Not colors)
+  logs: true, // Shows info about daisyUI version and used config in the console when building your CSS
+  themeRoot: ":root",
   // DaisyUI theme colors
   daisyui: {
     themes: [
       {
         light: {
-          primary: "#93BBFB",
-          "primary-content": "#F9FBFF",
-          secondary: "#DAE8FF",
-          "secondary-content": "#212638",
-          accent: "#4969A6",
-          "accent-content": "#F9FBFF",
-          neutral: "#212638",
-          "neutral-content": "#F9FBFF",
-          "base-100": "#F9FBFF",
-          "base-200": "#DAE8FF",
-          "base-300": "#93BBFB",
-          "base-content": "#212638",
-          info: "#93BBFB",
-          success: "#34EEB6",
-          warning: "#FFCF72",
-          error: "#FF8863",
+          "primary": "#008EAF",
+"primary-content": "#001016",
+"secondary": "#0C7964",
+"secondary-content": "#d5e7d1",
+"accent": "#3e00ff",
+"accent-content": "#cfdaff",
+"neutral": "#1b1a1f",
+"neutral-content": "#cccbcd",
+"base-100": "#e0fffd",
+"base-200": "#c3dedc",
+"base-300": "#a6bebc",
+"base-content": "#121616",
+"info": "#40e7b2",
+"info-content": "#000c16",
+"success": "#00ed6e",
+"success-content": "#001404",
+"warning": "#ff8b00",
+"warning-content": "#160700",
+"error": "#ff374b",
+"error-content": "#160102",
 
-          "--rounded-btn": "10px",
+          "--rounded-btn": "9999rem",
 
           ".tooltip": {
             "--tooltip-tail": "6px",
@@ -41,24 +50,27 @@ module.exports = {
       },
       {
         dark: {
-          primary: "#212638",
-          "primary-content": "#F9FBFF",
-          secondary: "#323f61",
-          "secondary-content": "#F9FBFF",
-          accent: "#4969A6",
-          "accent-content": "#F9FBFF",
-          neutral: "#F9FBFF",
-          "neutral-content": "#385183",
-          "base-100": "#385183",
-          "base-200": "#2A3655",
-          "base-300": "#212638",
-          "base-content": "#F9FBFF",
-          info: "#93BBFB",
-          success: "#34EEB6",
-          warning: "#FFCF72",
-          error: "#FF8863",
+          "primary": "#6C877B",
+          "primary-content": "#000516",
+          "secondary": "#000616",
+          "secondary-content": "#d5e7d1",
+          "accent": "#ff8000",
+          "accent-content": "#000616",
+          "neutral": "#222222",
+          "neutral-content": "#2C5542",
+          "base-100": "#03272b",
+          "base-200": "#022024",
+          "base-300": "#021a1d",
+          "info": "#0080c9",
+          "info-content": "#00060f",
+          "success": "#85f200",
+          "success-content": "#061400",
+          "warning": "#ffbf00",
+          "warning-content": "#160d00",
+          "error": "#f43a57",
+          "error-content": "#140103",
 
-          "--rounded-btn": "10px",
+          "--rounded-btn": "9999rem",
 
           ".tooltip": {
             "--tooltip-tail": "6px",
@@ -78,6 +90,9 @@ module.exports = {
     extend: {
       boxShadow: {
         center: "0 0 12px -2px rgb(0 0 0 / 0.05)",
+      },
+      fontFamily: {
+        "bai-jamjuree": ["Bai Jamjuree", "sans-serif"],
       },
       animation: {
         "pulse-fast": "pulse 1s cubic-bezier(0.4, 0, 0.6, 1) infinite",

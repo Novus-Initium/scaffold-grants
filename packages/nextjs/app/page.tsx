@@ -21,11 +21,11 @@ const Home: NextPage = () => {
         </Head>
         <div className="px-5">
           <h1 className="text-center">
-            <span className="block text-3xl mb-2 secondary-100">Nouns Grant Stack</span>
+            <span className="block text-3xl mb-2 secondary-100">Scaffold Grants Stack</span>
             <span className="block text-2xl text-secondary-200 font-bold">
               <div className="flex items-center gap-4">
                 <Image src="/favicon.png" alt="ico" width={24} height={24} />
-                Fund A Noun and Find Out
+                Fund A Round and Find Out
                 <Image src="/favicon.png" alt="ico" width={24} height={24} />
               </div>
             </span>
@@ -82,7 +82,7 @@ const Home: NextPage = () => {
                   <b>Manage</b> a Grant Round
                 </p>
                 <p>
-                  <b>Explore</b> live Rounds{" "}
+                  <b>Explore</b> Live Rounds{" "}
                 </p>
                 <div className="card-actions">
                   <ul className="menu menu-horizontal bg-base-200 rounded-box mt-6">

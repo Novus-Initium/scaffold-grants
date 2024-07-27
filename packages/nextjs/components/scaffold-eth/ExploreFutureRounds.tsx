@@ -146,7 +146,7 @@ const ExploreFutureRounds = () => {
                   <strong>Round End Time:</strong> {new Date(round.roundEndTime).toLocaleString()}
                 </p>
                 <p>
-                  <strong>Match Amount ($NOUNS):</strong> {round.matchAmount}
+                  <strong>Match Amount ($ERC20):</strong> {round.matchAmount}
                 </p>
                 <div className="card-actions justify-end">
                   <details className="dropdown">

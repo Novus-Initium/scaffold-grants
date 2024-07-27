@@ -19,11 +19,11 @@ const Home: NextPage = () => {
                 <h1 className="card-title text-3xl font-extrabold text-secondary">Our Mission</h1>
                 <div className="card-actions flex-col items-center rounded-md mb-12">
                   <p className="flex text-lg leading-relaxed mb-3 text-center font-medium">
-                    At Nouns Grant Stack, we aim to provide a simple and easy-to-use SDK for developers to build grant
+                    At Scaffold Grant Stack, we aim to provide a simple and easy-to-use SDK for developers to build grant
                     stacks on any EVM blockchain. Our SDK is designed to be modular and flexible, allowing developers to
                     easily create and deploy custom grant stacks for their projects.
                   </p>
-                  <Link href="https://github.com/0xJade/scaffold-grants-stack" passHref>
+                  <Link href="https://github.com/Novus-Initium/scaffold-grants" passHref>
                     <button className="w-full mb-6 py-3 px-6 border border-transparent rounded-lg shadow-lg text-lg font-semibold text-base-content bg-base-300 hover:bg-secondary hover:shadow-xl focus:outline-white focus:ring-2 focus:ring-offset-2 focus:ring-teal-500 transform transition-transform duration-200 hover:-translate-y-1 active:translate-y-0">
                       Check out our Github
                     </button>
