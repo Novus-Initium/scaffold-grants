@@ -1,13 +1,11 @@
-# 🏗 Scaffold-Grants
+# 🏗 Scaffold-Grant-Stack
 
 <h4 align="center">
-  <a href="https://docs.scaffoldeth.io">Documentation</a> |
-  <a href="https://scaffoldeth.io">Website</a>
+  <a href="https://docs.scaffoldeth.io">Scaffold ETH 2</a> |
+  <a href="https://github.com/allo-protocol">Gitcoin's Allo</a>
 </h4>
 
-🧪 An open-source, up-to-date toolkit for building decentralized grant stack applications (dapps) on the Ethereum and EVM blockchains. It's designed to make it easier for developers to create and deploy custom smart contracts and build more easily edit user interfaces that interact with a custom version of the Allo v1 contracts, with abstracted componenets to make it easier to understand, modify, experiement, and learn with. 
-
-⚙️ Built using NextJS, RainbowKit, Hardhat, Wagmi, Viem, and Typescript, Allo v1, IPFS.
+🧪 An open-source toolkit for building decentralized grant stacks and various capital allocation and accountability platforms, tools, as well as various other tings for the Ethereum and EVM blockchains. It's designed to make it easier for developers to create and deploy custom smart contracts and build more easily edit user interfaces that interact with a custom version of the Allo v1 contracts, with abstracted componenets to make it easier to understand, modify, experiement, and learn with.
 
 - ✅ **Contract Hot Reload**: Your frontend auto-adapts to your smart contract as you edit it! Customize your grant stack and automatically generate web-hooks for custom contracts and functions. 
 - 🪝 **[Custom hooks](https://docs.scaffoldeth.io/hooks/)**: Collection of React hooks wrapper around [wagmi](https://wagmi.sh/) to simplify interactions with smart contracts with typescript autocompletion.
@@ -32,8 +30,8 @@ To get started with Scaffold-ETH 2, follow the steps below:
 1. Clone this repo & install dependencies
 
 ```
-git clone https://github.com/0xJade/scaffold-grants-stack.git
-cd scaffold-grants-stack
+git clone https://github.com/Novus-Initium/Scaffold-grants
+cd scaffold-grants
 yarn install
 ```
 
@@ -63,14 +61,14 @@ Visit your app on: `http://localhost:3000`. You can interact with your smart con
 
 **What's next**:
 
-- Edit your smart contract controlling capital allocation and grants management` in `packages/hardhat/contracts`
+- Edit your smart contracts controlling capital allocation and grants management` in `packages/hardhat/contracts`
 - Edit your frontend homepage at `packages/nextjs/app/page.tsx`. For guidance on [routing](https://nextjs.org/docs/app/building-your-application/routing/defining-routes) and configuring [pages/layouts](https://nextjs.org/docs/app/building-your-application/routing/pages-and-layouts) checkout the Next.js documentation.
 - Edit your deployment scripts in `packages/hardhat/deploy`
 - Edit your smart contract test in: `packages/hardhat/test`. To run test use `yarn hardhat:test`
 
 ## Documentation
 
-To learn more about Scaffold-Eth-2 and allo visit [docs](https://docs.scaffoldeth.io) to learn how to start building with Scaffold-ETH 2. and (Insert allo link here)
+To learn more about Scaffold-Eth-2 and allo visit [docs](https://docs.scaffoldeth.io) to learn how to start building with Scaffold-ETH 2
 
 To know more about its features, check out our [website](https://scaffoldeth.io).
 
