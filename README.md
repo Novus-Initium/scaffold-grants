@@ -2,7 +2,7 @@
 
 <h4 align="center">
   <a href="https://docs.scaffoldeth.io">Scaffold ETH 2</a> |
-  <a href="https://github.com/allo-protocol">Gitcoin's Allo</a>
+  <a href="https://github.com/allo-protocol">Gitcoin Allo</a>
 </h4>
 
 🧪 An open-source toolkit for building decentralized grant stacks and various capital allocation and accountability platforms, tools, as well as various other tings for the Ethereum and EVM blockchains. It's designed to make it easier for developers to create and deploy custom smart contracts and build more easily edit user interfaces that interact with a custom version of the Allo v1 contracts, with abstracted componenets to make it easier to understand, modify, experiement, and learn with.
