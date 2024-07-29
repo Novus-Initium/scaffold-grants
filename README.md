@@ -33,7 +33,13 @@ cd scaffold-grants
 yarn install
 ```
 
-2. Run a local network in the first terminal:
+2. Add Pinata API Keys and Gateway in your packages/nextjs/.env
+
+- PINATA_API_KEY=
+- PINATA_SECRET_API_KEY=
+- PINATA_GATEWAY=
+
+3. Run a local network in the first terminal:
 
 ```
 yarn chain
@@ -41,7 +47,9 @@ yarn chain
 
 This command starts a local Ethereum network using Hardhat. The network runs on your local machine and can be used for testing and development. You can customize the network configuration in `hardhat.config.ts`.
 
-3. On a second terminal, deploy the test contract:
+
+
+4. On a second terminal, deploy the test contract:
 
 ```
 yarn deploy
