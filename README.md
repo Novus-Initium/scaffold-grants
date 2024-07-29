@@ -55,7 +55,9 @@ This command deploys a test smart contract to the local network. The contract is
 yarn start
 ```
 
-Visit your app on: `http://localhost:3000`. You can interact with your smart contract using the `Debug Contracts` page. You can tweak the app config in `packages/nextjs/scaffold.config.ts`.
+5. In the Next folder, find the env.example to connect to an IPFS gateway and API key to submit and retrieve data to render the UI faster at scale. 
+
+Visit your app on: `http://localhost:3000`. You can interact with your smart contract using the `Debug Contracts` page. You can tweak the app's homepage in config in `packages/nextjs/scaffold.config.ts`.
 
 **What's next**:
 
