@@ -5,7 +5,7 @@
   <a href="https://github.com/allo-protocol">Gitcoin Allo</a>
 </h4>
 
-🧪 An open-source toolkit for building decentralized grant stacks and various capital allocation and accountability platforms, tools, as well as various other tings for the Ethereum and EVM blockchains. It's designed to make it easier for developers to create and deploy custom smart contracts and build more easily edit user interfaces that interact with a custom version of the Allo v1 contracts, with abstracted componenets to make it easier to understand, modify, experiement, and learn with.
+🧪 An open-source toolkit for building decentralized grant stacks and various capital allocation and accountability platforms, tools, as well as various other things for the Ethereum and EVM blockchains. It's designed to make it easier for developers to create and deploy custom smart contracts and build more easily edit user interfaces that interact with a custom version of the Allo v1 contracts, with abstracted components to make it easier to understand, modify, experiment, and learn with.
 
 - ✅ **Contract Hot Reload**: Your frontend auto-adapts to your smart contract as you edit it! Customize your grant stack and automatically generate web-hooks for custom contracts and functions. 
 - 🪝 **[Custom hooks](https://docs.scaffoldeth.io/hooks/)**: Collection of React hooks wrapper around [wagmi](https://wagmi.sh/) to simplify interactions with smart contracts with typescript autocompletion.
