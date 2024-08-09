@@ -1,7 +1,7 @@
 # 🏗 Scaffold-Grant-Stack
 
 <h4 align="center">
-  <a href="https://scaffold-grants.vercel.app">Scaffold Grants</a> |
+  <a href="https://scaffold-grants.vercel.app">Live Scaffold Grants UI</a> |
   <a href="https://github.com/allo-protocol">Gitcoin Allo</a>
 </h4>
 
