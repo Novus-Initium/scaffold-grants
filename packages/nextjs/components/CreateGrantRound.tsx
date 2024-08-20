@@ -192,89 +192,124 @@ const CreateRoundForm: React.FC = () => {
   };
 
   return (
-    <form onSubmit={handleCreateRound} className=" bg-base-400 space-y-6">
-      <h1 className="text-2xl font-bold mb-6 text-center text-black"></h1>
-      <div>
-        <label htmlFor="name" className="block text-sm font-medium text-white">
-          Round Name
-        </label>
-        <input
-          id="name"
-          type="text"
-          value={name}
-          onChange={e => setName(e.target.value)}
-          required
-          className="mt-1 block w-full px-3 py-2 border border-white rounded-md shadow-sm"
-        />
-      </div>
-      <div>
-        <label htmlFor="description" className="block text-sm font-medium text-white">
-          Round Description
-        </label>
-        <input
-          id="name"
-          type="text"
-          value={description}
-          onChange={e => setDescription(e.target.value)}
-          required
-          className="mt-1 block w-full px-3 py-2 border border-yellow-100 rounded-md shadow-sm"
-        />
-      </div>
-      <div>
-        <label htmlFor="matchAmount" className="block text-sm font-medium text-white">
-          Match Amount
-        </label>
-        <input
-          id="matchAmount"
-          type="text"
-          value={matchAmount}
-          onChange={e => setMatchAmount(e.target.value)}
-          required
-          className="mt-1 block w-full px-3 py-2 border border-yellow-100 rounded-md shadow-sm"
-        />
-      </div>
-      <div>
-        <label htmlFor="token" className="block text-sm font-medium text-white">
-          Token Address (Nounish)
-        </label>
-        <input
-          id="token"
-          type="text"
-          value={token}
-          onChange={e => setToken(e.target.value)}
-          required
-          className="mt-1 block w-full px-3 py-2 border border-yellow-100 rounded-md shadow-sm"
-        />
-      </div>
-      <div>
-        <label htmlFor="applicationsStartTime" className="block text-sm font-medium text-white">
-          Applications Start Time
-        </label>
-        <div className="mt-1">
-          <DatePicker
-            selected={applicationsStartTime}
-            onChange={date => setApplicationsStartTime(date)}
-            showTimeSelect
-            dateFormat="Pp"
-            className="custom-datepicker-input mt-1 block w-full px-3 py-2 border border-yellow-100 rounded-md shadow-sm"
-          />
+    <form onSubmit={handleCreateRound} className="bg-base-400 space-y-12 p-12">
+      <h1 className="text-2xl font-bold mb-6 text-center text-teal-500"> Specify your Grant Round </h1>
+
+        <div className="grid grid-cols-1">
+
+
+          <div className="grid grid-cols-2">
+
+            <div className="px-10 space-y-8">
+              <div>
+                <label htmlFor="name" className="block text-sm font-medium text-white">
+                  Round Name
+                </label>
+                  <input
+                  id="name"
+                  type="text"
+                  value={name}
+                  onChange={e => setName(e.target.value)}
+                  required
+                  className="mt-1 block w-full px-3 py-2 border border-white rounded-md shadow-sm"/>
+              </div>
+
+            <div>
+              <label htmlFor="description" className="block text-sm font-medium text-white">
+                Round Description
+              </label>
+              <input
+                id="name"
+                type="text"
+                value={description}
+                onChange={e => setDescription(e.target.value)}
+                required
+                className="mt-1 block w-full px-3 py-2 border border-yellow-100 rounded-md shadow-sm"/>
+            </div>
+          </div>
+
+
+          <div className="px-10 space-y-8">
+            <div>
+              <label htmlFor="matchAmount" className="block text-sm font-medium text-white">
+                Match Amount
+              </label>
+              <input
+                id="matchAmount"
+                type="text"
+                value={matchAmount}
+                onChange={e => setMatchAmount(e.target.value)}
+                required
+                className="mt-1 block w-full px-3 py-2 border border-yellow-100 rounded-md shadow-sm"/>
+            </div>
+
+            <div>
+            <label htmlFor="token" className="block text-sm font-medium text-white">
+              Token Address (Nounish)
+            </label>
+            <input
+              id="token"
+              type="text"
+              value={token}
+              onChange={e => setToken(e.target.value)}
+              required
+              className="mt-1 block w-full px-3 py-2 border border-yellow-100 rounded-md shadow-sm"/>
+          </div>
+
         </div>
-      </div>
-      <div>
-        <label htmlFor="applicationsEndTime" className="block text-sm font-medium text-white">
-          Applications End Time
-        </label>
-        <div className="mt-1">
-          <DatePicker
-            selected={applicationsEndTime}
-            onChange={date => setApplicationsEndTime(date)}
-            showTimeSelect
-            dateFormat="Pp"
-            className="custom-datepicker-input mt-1 block w-full px-3 py-2 border border-yellow-100 rounded-md shadow-sm"
-          />
+
         </div>
-      </div>
-      <div>
+
+        <div className="pt-12 grid grid-cols-3">
+
+
+          <div className="px-10 space-y-8 grid place-content-center">
+
+            <div>
+              <label htmlFor="applicationsStartTime" className="block text-sm font-medium text-white">
+                Applications Start Time
+              </label>
+              <div className="mt-1">
+                <DatePicker
+                selected={applicationsStartTime}
+                onChange={date => setApplicationsStartTime(date)}
+                showTimeSelect
+                dateFormat="Pp"
+                className="custom-datepicker-input mt-1 block w-full px-3 py-2 border border-yellow-100 rounded-md shadow-sm"/>
+              </div>
+            </div>
+
+            <div>
+              <label htmlFor="applicationsEndTime" className="block text-sm font-medium text-white">
+                Applications End Time
+              </label>
+              <div className="mt-1">
+                <DatePicker
+                  selected={applicationsEndTime}
+                  onChange={date => setApplicationsEndTime(date)}
+                  showTimeSelect
+                  dateFormat="Pp"
+                  className="custom-datepicker-input mt-1 block w-full px-3 py-2 border border-yellow-100 rounded-md shadow-sm"/>
+              </div>
+            </div>
+
+          </div>
+
+
+
+          <div className="flex justify-center pt-12">
+            <button
+              type="submit"
+              disabled={isMining}
+              className="w-full max-w-xs my-8 mx-4 border border-transparent rounded-md shadow-sm text-sm font-medium text-white bg-teal-600 hover:bg-teal-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-teal-500">
+              {isMining ? "Creating Round..." : "Create Round"}
+            </button>
+          </div>
+
+
+
+        <div className="px-10 space-y-8 grid place-content-center">
+    <div>
         <label htmlFor="roundStartTime" className="block text-sm font-medium text-white">
           Round Start Time
         </label>
@@ -287,8 +322,9 @@ const CreateRoundForm: React.FC = () => {
             className="custom-datepicker-input mt-1 block w-full px-3 py-2 border border-yellow-100 rounded-md shadow-sm"
           />
         </div>
-      </div>
-      <div>
+    </div>
+
+    <div>
         <label htmlFor="roundEndTime" className="block text-sm font-medium text-white">
           Round End Time
         </label>
@@ -301,16 +337,19 @@ const CreateRoundForm: React.FC = () => {
             className="custom-datepicker-input mt-1 block w-full px-3 py-2 border border-yellow-100 rounded-md shadow-sm"
           />
         </div>
-      </div>
-      <div className="flex justify-center">
-        <button
-          type="submit"
-          disabled={isMining}
-          className="w-full max-w-xs py-2 px-4 border border-transparent rounded-md shadow-sm text-sm font-medium text-white bg-teal-600 hover:bg-teal-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-teal-500"
-        >
-          {isMining ? "Creating Round..." : "Create Round"}
-        </button>
-      </div>
+    </div>
+
+  </div>
+
+
+
+
+
+</div>
+
+
+</div>
+
     </form>
   );
 };
