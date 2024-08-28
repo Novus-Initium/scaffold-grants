@@ -19,7 +19,7 @@ const deployAlloSettings: DeployFunction = async function (hre: HardhatRuntimeEn
       protocolFeePercentage: 50, // Example: 0.5%
       protocolTreasury: process.env.SEPOLIA_TREASURY_ADDRESS || "0x8DE8260C05611426c9A11Bf63b794c7183f30ecB",
     },
-    localhost: {
+    hardhat: {
       protocolFeePercentage: 50, // Example: 0.5%
       protocolTreasury: process.env.HARDHAT_TREASURY_ADDRESS || "0x8DE8260C05611426c9A11Bf63b794c7183f30ecB",
     },

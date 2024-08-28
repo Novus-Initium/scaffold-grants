@@ -7,12 +7,13 @@ import { SwitchTheme } from "~~/components/SwitchTheme";
 import { BuidlGuidlLogo } from "~~/components/assets/BuidlGuidlLogo";
 import { useTargetNetwork } from "~~/hooks/scaffold-eth/useTargetNetwork";
 import { useGlobalState } from "~~/services/store/store";
+import {Faucet} from "~~/components/scaffold-eth";
 
 /**
  * Site footer
  */
 export const Footer = () => {
-  const nativeCurrencyPrice = useGlobalState(state => state.nativeCurrencyPrice);
+  const nativeCurrencyPrice = useGlobalState(state => state.setNativeCurrencyPrice);
   const { targetNetwork } = useTargetNetwork();
   const isLocalNetwork = targetNetwork.id === hardhat.id;
 
@@ -35,7 +36,24 @@ export const Footer = () => {
                   <MagnifyingGlassIcon className="h-4 w-4" />
                   <span>Block Explorer</span>
                 </Link>
-              </>
+              
+              
+                <div>
+                  <div className="fixed flex justify-between items-center w-full z-10 p-4 bottom-0 left-0 pointer-events-none">
+                    <div className="flex space-x-2 pointer-events-auto">
+                      {nativeCurrencyPrice > 0 && (
+                        <div className="btn btn-primary btn-sm font-normal cursor-auto gap-0">
+                          <CurrencyDollarIcon className="h-4 w-4 mr-0.5" />
+                          <span>{nativeCurrencyPrice}</span>
+                        </div>
+                      )}
+                    </div>
+                    <SwitchTheme className="pointer-events-auto" />
+                  </div>
+                </div>
+
+                </>
+
             )}
           </div>
           <SwitchTheme className={`pointer-events-auto ${isLocalNetwork ? "self-end md:self-auto" : ""}`} />
