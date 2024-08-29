@@ -4,21 +4,18 @@ import React, { useEffect, useState } from "react";
 import { encodeRoundParameters, getABI, getNetworkName  } from "../utils/utils";
 import { ApplicationStatus, setApplicationStatuses } from "../utils/allo/setApplicationStatus";
 import axios from "axios";
-import { BrowserProvider, Contract, Interface, getAddress, isAddress, parseUnits } from "ethers";
+import { BrowserProvider, Contract, Interface, getAddress, isAddress, parseUnits, ZeroAddress } from "ethers";
 import DatePicker from "react-datepicker";
 import "react-datepicker/dist/react-datepicker.css";
 import { useScaffoldWriteContract } from "~~/hooks/scaffold-eth";
 import { notification } from "~~/utils/scaffold-eth";
-
-// Define AddressZero manually
-const AddressZero = "0x34182d56d905a195524a8F1813180C134687ca34";
 
 const CreateRoundForm: React.FC = () => {
   const [name, setName] = useState<string>("");
   const [description, setDescription] = useState<string>("");
   const [ownerAddress, setOwnerAddress] = useState<string>("");
   const [matchAmount, setMatchAmount] = useState<string>("");
-  const [token, setToken] = useState<string>(AddressZero);
+  const [token, setToken] = useState<string>(ZeroAddress);
   const [roundFeePercentage, setRoundFeePercentage] = useState<string>("");
   const [roundFeeAddress, setRoundFeeAddress] = useState<string>("");
   const [applicationsStartTime, setApplicationsStartTime] = useState<Date | null>(null);
