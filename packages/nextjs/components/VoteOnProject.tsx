@@ -1,10 +1,9 @@
 "use client";
 
 import { useEffect, useState } from "react";
-import { encodeQFVotes } from "../../../hardhat/scripts/utils";
-import { getABI, getNetworkName } from "../../../hardhat/scripts/utils.js";
-import deployedContracts from "../../contracts/deployedContracts";
-import parsePointer from "../../utils/allo/parsePointer";
+import { encodeRoundParameters, getABI, getNetworkName, encodeQFVotes  } from "../utils/utils";
+import deployedContracts from "../contracts/deployedContracts";
+import parsePointer from "../utils/allo/parsePointer";
 import { BrowserProvider, Contract, EventLog, ethers, toUtf8Bytes, zeroPadValue } from "ethers";
 // Adjust the import path as needed
 import { parseUnits } from "viem";

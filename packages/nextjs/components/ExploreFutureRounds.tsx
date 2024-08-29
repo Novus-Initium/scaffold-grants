@@ -1,10 +1,9 @@
 "use client";
 
 import React, { useEffect, useState } from "react";
-import { getABI, getNetworkName } from "../../../hardhat/scripts/utils.js";
-import "../../styles/exploreFutureRounds.css";
-import { applyToRound } from "../../utils/allo/applyToRound";
-import parsePointer from "../../utils/allo/parsePointer";
+import { encodeRoundParameters, getABI, getNetworkName  } from "../utils/utils";
+import { applyToRound } from "../utils/allo/applyToRound";
+import parsePointer from "../utils/allo/parsePointer";
 import { ethers } from "ethers";
 import { useScaffoldReadContract } from "~~/hooks/scaffold-eth";
 

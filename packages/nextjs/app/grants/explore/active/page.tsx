@@ -1,7 +1,7 @@
 "use client";
 
 import React from "react";
-import VoteOnProject from "../../../../components/scaffold-eth/VoteOnProject";
+import VoteOnProject from "../../../../components/VoteOnProject";
 
 const ExploreActiveRoundsPage = () => {
   return (

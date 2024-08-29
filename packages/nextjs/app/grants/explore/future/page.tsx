@@ -1,7 +1,7 @@
 "use client";
 
 import React from "react";
-import ExploreFutureRounds from "../../../../components/scaffold-eth/ExploreFutureRounds";
+import ExploreFutureRounds from "../../../../components/ExploreFutureRounds";
 
 const ExploreFutureRoundsPage = () => {
   return (

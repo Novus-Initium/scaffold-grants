@@ -1,8 +1,7 @@
 "use client";
 
 import React, { useEffect, useState } from "react";
-import { encodeRoundParameters } from "../../hardhat/scripts/utils";
-import { getABI, getNetworkName } from "../../hardhat/scripts/utils";
+import { encodeRoundParameters, getABI, getNetworkName  } from "../utils/utils";
 import { ApplicationStatus, setApplicationStatuses } from "../utils/allo/setApplicationStatus";
 import axios from "axios";
 import { BrowserProvider, Contract, Interface, getAddress, isAddress, parseUnits } from "ethers";

@@ -1,4 +1,4 @@
-import { getABI, getNetworkName } from "../../../hardhat/scripts/utils";
+import { getABI, getNetworkName } from "../../utils/utils";
 import { ethers } from "ethers";
 
 export enum ApplicationStatus {

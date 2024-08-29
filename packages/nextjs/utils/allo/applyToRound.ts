@@ -1,4 +1,4 @@
-import { getABI, getNetworkName } from "../../../hardhat/scripts/utils";
+import { getABI, getNetworkName } from "../utils";
 import { ethers } from "ethers";
 import { notification } from "~~/utils/scaffold-eth";
 
