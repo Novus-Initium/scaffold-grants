@@ -82,8 +82,8 @@ const assertEnvironment = () => {
 
 const getABI = (networkName, contractName) => {
   try {
-    console.log(`../../hardhat/deployments/${networkName}/${contractName}.json`)
-    const abiFile = require(`../../hardhat/deployments/${networkName}/${contractName}.json`);
+    console.log(`../contracts/deploymnets/${networkName}/${contractName}.json`)
+    const abiFile = require(`../contracts/deployments/${networkName}/${contractName}.json`);
     console.log(abiFile)
     if (!abiFile.address) {
       throw new Error(`Address not found for ${contractName} on network ${networkName}`);

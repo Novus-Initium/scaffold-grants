@@ -231,7 +231,7 @@ const CreateRoundForm: React.FC = () => {
       </div>
       <div>
         <label htmlFor="token" className="block text-sm font-medium text-white">
-          Token Address (Nounish)
+          Token Address
         </label>
         <input
           id="token"
