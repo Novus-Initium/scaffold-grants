@@ -9,6 +9,7 @@ import DatePicker from "react-datepicker";
 import "react-datepicker/dist/react-datepicker.css";
 import { useScaffoldWriteContract } from "~~/hooks/scaffold-eth";
 import { notification } from "~~/utils/scaffold-eth";
+import { ethers } from "ethers";
 
 const CreateRoundForm: React.FC = () => {
   const [name, setName] = useState<string>("");
@@ -30,7 +31,10 @@ const CreateRoundForm: React.FC = () => {
       try {
         const provider = new BrowserProvider((window as any).ethereum);
         const signer = await provider.getSigner();
+        // what is the type for address that is recognized in solidity?
         const address = await signer.getAddress();
+        // setOwnerAddress(ethers.utils.getAddress(address));  // Use getAddress to standardize the address format
+
         setOwnerAddress(address);
 
         // const network = await provider.getNetwork();
