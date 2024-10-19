@@ -21,7 +21,7 @@ const Home: NextPage = () => {
         </Head>
         <div className="px-5">
           <h1 className="text-center">
-            <span className="block text-3xl mb-2 secondary-100">Scaffold Grants Stack</span>
+            <span className="block text-3xl mb-2 secondary-100">Civkit</span>
             <span className="block text-2xl text-secondary-200 font-bold">
               <div className="flex items-center gap-4">
                 <Image src="/favicon.png" alt="ico" width={24} height={24} />

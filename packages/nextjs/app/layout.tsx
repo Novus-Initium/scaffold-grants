@@ -5,8 +5,8 @@ import "~~/styles/globals.css";
 import { getMetadata } from "~~/utils/scaffold-eth/getMetadata";
 
 export const metadata = getMetadata({
-  title: "Scaffold-Grant-Stack",
-  description: "Built with Scaffold-Grants-Stack",
+  title: "Civikit",
+  description: "Built with Civkit",
 });
 
 const ScaffoldEthApp = ({ children }: { children: React.ReactNode }) => {

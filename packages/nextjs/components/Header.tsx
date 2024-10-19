@@ -100,8 +100,7 @@ export const Header = () => {
             <Image alt="SE2 logo" className="cursor-pointer" fill src="/V3.png" />
           </div>
           <div className="flex flex-col">
-            <span className="font-bold leading-tight">Scaffold</span>
-            <span className="text-xs">Grants Stack</span>
+            <span className="font-bold leading-tight">Civikit</span>
           </div>
         </Link>
         <ul className="hidden lg:flex lg:flex-nowrap menu menu-horizontal px-1 gap-2">

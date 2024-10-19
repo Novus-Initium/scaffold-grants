@@ -1,7 +1,7 @@
-# 🏗 Scaffold-Grant-Stack
+# 🏗 Civkit
 
 <h4 align="center">
-  <a href="https://scaffold-grants.vercel.app">Live Scaffold Grants UI</a> |
+  <a href="https://civikit.vercel.app">Live Civikit UI</a> |
   <a href="https://docs.scaffoldeth.io">Scaffold ETH 2</a> |
   <a href="https://github.com/allo-protocol">Gitcoin Allo</a>
 </h4>
@@ -29,8 +29,8 @@ To get started with Scaffold-ETH 2, follow the steps below:
 1. Clone this repo & install dependencies
 
 ```
-git clone https://github.com/Novus-Initium/Scaffold-grants
-cd scaffold-grants
+git clone https://github.com/Novus-Initium/civikit
+cd civikit
 yarn install
 ```
 
