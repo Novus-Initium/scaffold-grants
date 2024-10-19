@@ -29,8 +29,8 @@ To get started with Scaffold-ETH 2, follow the steps below:
 1. Clone this repo & install dependencies
 
 ```
-git clone https://github.com/Novus-Initium/civikit
-cd civikit
+git clone https://github.com/Novus-Initium/Civikit
+cd Civikit
 yarn install
 ```
 

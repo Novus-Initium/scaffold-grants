@@ -23,7 +23,7 @@ const Home: NextPage = () => {
                     stacks on any EVM blockchain. Our SDK is designed to be modular and flexible, allowing developers to
                     easily create and deploy custom grant stacks for their projects.
                   </p>
-                  <Link href="https://github.com/Novus-Initium/civikit" passHref>
+                  <Link href="https://github.com/Novus-Initium/Civikit" passHref>
                     <button className="w-full mb-6 py-3 px-6 border border-transparent rounded-lg shadow-lg text-lg font-semibold text-base-content bg-base-300 hover:bg-secondary hover:shadow-xl focus:outline-white focus:ring-2 focus:ring-offset-2 focus:ring-teal-500 transform transition-transform duration-200 hover:-translate-y-1 active:translate-y-0">
                       Check out our Github
                     </button>
