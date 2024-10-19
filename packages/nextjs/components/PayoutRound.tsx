@@ -129,13 +129,104 @@ const ExplorePastRounds = () => {
   if (loading) return <div>Loading...</div>;
   if (error) return <div>Error: {error}</div>;
 
+  const fundRound = async (round: Round) => {
+    try {
+      if (!window.ethereum) {
+        throw new Error("No ethereum provider found. Please install MetaMask.");
+      }
+      const amount = round.matchAmount;
+      const roundAddress = round.address;
+      const provider = new ethers.BrowserProvider(window.ethereum);
+      const signer = await provider.getSigner();
+  
+      console.log("Funding round:", round);
+      console.log("Amount:", amount);
+      console.log("Round Address:", roundAddress);
+  
+      // Check ETH balance
+      const balance = await provider.getBalance(await signer.getAddress());
+      console.log("ETH balance:", ethers.formatEther(balance));
+  
+      // Estimate gas
+      try {
+        const gasEstimate = await provider.estimateGas({
+          to: roundAddress,
+          value: ethers.parseEther(amount)
+        });
+        console.log("Estimated gas:", gasEstimate.toString());
+      } catch (gasError: any) {
+        console.error("Gas estimation failed:", gasError);
+        throw new Error(`Gas estimation failed: ${gasError.message}`);
+      }
+  
+      // ETH transfer
+      const tx = await signer.sendTransaction({
+        to: roundAddress,
+        value: ethers.parseEther(amount)
+      });
+      console.log("ETH transfer transaction sent:", tx.hash);
+      
+      await tx.wait();
+      console.log("ETH transfer confirmed");
+  
+      alert("Round funded successfully!");
+    } catch (error: any) {
+      console.error("Error funding round:", error);
+      if (error.error && error.error.data) {
+        console.error("Error data:", error.error.data);
+      }
+      alert(`Error funding round: ${error.message}`);
+    }
+  }
+
   const payoutRound = async (round: Round) => {
-    const provider = new ethers.BrowserProvider(window.ethereum);
-    const signer = await provider.getSigner();
-    console.log('Round Address', round.address);
-    const networkName = await getNetworkName(provider);
-    const roundContract = new ethers.Contract(round.address, getABI(networkName, "RoundImplementation").abi, signer);
-    roundContract.setReadyForPayout();
+    try {
+      if (!window.ethereum) {
+        throw new Error("No ethereum provider found. Please install MetaMask.");
+      }
+  
+      const provider = new ethers.BrowserProvider(window.ethereum);
+      const signer = await provider.getSigner();
+      console.log('Round Address:', round.address);
+      const networkName = await getNetworkName(provider);
+      const roundABI = getABI(networkName, "RoundImplementation").abi;
+      console.log('Round ABI:', roundABI);
+      const roundContract = new ethers.Contract(round.address, roundABI, signer);
+  
+      // Log contract methods
+      console.log('Contract methods:', Object.keys(roundContract.interface.functions));
+  
+      // Estimate gas before sending the transaction
+      try {
+        const gasEstimate = await roundContract.setReadyForPayout.estimateGas();
+        console.log('Estimated gas:', gasEstimate.toString());
+      } catch (gasError: any) {
+        console.error('Gas estimation failed:', gasError);
+        // Log more details about the error
+        if (gasError.error && gasError.error.data) {
+          console.error('Error data:', gasError.error.data);
+        }
+        throw new Error(`Gas estimation failed: ${gasError.message}`);
+      }
+  
+      // Call the setReadyForPayout function
+      const tx = await roundContract.setReadyForPayout();
+      console.log("Transaction sent:", tx.hash);
+      
+      // Wait for the transaction to be mined
+      const receipt = await tx.wait();
+      console.log("Transaction confirmed:", receipt.transactionHash);
+      
+      // You might want to update the UI or state here to reflect the successful payout setup
+      alert("Payout setup successful!");
+    } catch (error: any) {
+      console.error("Error setting up payout:", error);
+      // Log more details about the error
+      if (error.error && error.error.data) {
+        console.error('Error data:', error.error.data);
+      }
+      alert(`Error setting up payout: ${error.message}`);
+    }
   }
 
 
@@ -176,7 +267,7 @@ const ExplorePastRounds = () => {
                   <details className="dropdown">
                     <summary
                       className="btn m-1"
-                      onClick={() => payoutRound(round)} // Trigger payoutRound on click
+                      onClick={() => fundRound(round)} // Trigger payoutRound on click
                     >
                       Setup Payout
                     </summary>
